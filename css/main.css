@@ -1,0 +1,491 @@
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
+.sec {
+    padding: 100px 0;
+}
+
+.sec .title {
+    max-width: 1200px;
+    margin: 0 auto 28px auto;
+    padding: 0 15px;
+}
+
+.sec .title h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.sec .title p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+}
+
+/* .header * {
+    outline: 1px solid #ddd;
+} */
+
+.header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    z-index: 999;
+}
+
+.header.on {
+    border-bottom: 1px solid #ddd;
+}
+
+.header a {
+    display: block;
+}
+
+.header .heder_wrap {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.header.on .heder_wrap {
+    height: 70px;
+}
+
+.header .gnb {
+    margin: 0 auto 0 60px;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.header .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
+}
+
+.header .sub {
+    height: 0;
+    overflow: hidden;
+
+
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+
+
+
+    transition: 0.5s;
+}
+
+.header .sub img {
+    max-width: 100%;
+}
+
+.header .gnb:hover>ul>li .sub {
+    height: 200px;
+    display: block;
+}
+
+.header .gnb::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+
+    background: #fff;
+    z-index: 999;
+
+    transition: 0.5s;
+}
+
+.header .gnb:hover::before {
+    height: 250px;
+    position: absolute;
+}
+
+.header .search input[type="text"] {
+    width: 100px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #666;
+    font-size: 14px;
+    font-family: 'Noto Sans KR';
+
+    transition: width 0.5s;
+}
+
+.header .search input[type="text"]:focus {
+    width: 160px;
+}
+
+.header .search input[type="text"]::placeholder {
+    color: #ddd;
+}
+
+.header .search input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.header .search button {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 30px;
+
+    vertical-align: middle;
+}
+
+.main_visual {
+    position: relative;
+    height: auto;
+}
+
+.itm {
+    position: relative;
+    height: calc(100vh - 100px);
+
+}
+
+
+.itm01 {
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.itm02 {
+    background: url(../images/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.itm03 {
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.itm04 {
+    background: url(../images/mainvisual04.jpg) no-repeat center center/cover;
+}
+
+.main_visual .slogan {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.main_visual .itm h3 {
+    font-size: 60px;
+    font-weight: 700;
+    /* white-space: nowrap; */
+    color: #fff;
+    margin: 0 0 20px 0;
+    transform: translate(0, 100px);
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px #bbb;
+    opacity: 0;
+}
+
+.main_visual .itm.on h3 {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.main_visual .itm p {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 30px;
+    margin: 0 0 50px 0;
+    padding: 6px 15px;
+
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.main_visual .itm01 p {
+    background: #3873cc;
+}
+
+.main_visual .itm02 p {
+    background: #e4d021;
+}
+
+.main_visual .itm03 p {
+    background: #703d20;
+}
+
+.main_visual .itm04 p {
+    background: #ffa1a1;
+}
+
+
+
+.main_visual .itm.on p {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s; */
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 20px 5px 20px;
+    border: none;
+    color: #369;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+}
+
+.main_visual .itm .btn {
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.main_visual .itm.on .btn {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.main_visual .itm02 .btn {
+    border: none;
+    color: rgb(161, 161, 0);
+    background: #fff;
+}
+
+.main_visual .itm03 .btn {
+    border: none;
+    color: #703d20;
+    background: #fff;
+}
+
+.main_visual .arrows .left {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    border-radius: 50% 0 0 50%;
+    background: rgba(255, 255, 255, 0.3)
+}
+
+.main_visual .arrows .right {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    border-radius: 0 50% 50% 0;
+    background: rgba(255, 255, 255, 0.3)
+}
+
+
+.main_visual .arrows i {
+    font-size: 30px;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid #fff;
+}
+
+.main_visual .arrows i:hover {
+    color: #333;
+    border: 1px solid #333;
+}
+
+.main_visual .slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.main_visual .slick-dots>* {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.main_visual .slick-dots li button {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    margin: 0 3px;
+    font-size: 0px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-radius: 25%;
+}
+
+.main_visual .slick-dots li.slick-active button {
+    background: #fff;
+}
+
+.main_content {
+    padding: 100px 0;
+    background: linear-gradient(transparent 50%, #eff7ff 50%);
+}
+
+.main_content h2 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 18px 0;
+}
+
+.main_content p {
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.main_content .tit {
+    margin: 0 auto 40px auto;
+}
+
+.main_content .tit::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #ddd;
+    margin: 30px auto;
+}
+
+.main_content .content {
+    display: flex;
+    gap: 30px;
+}
+
+.main_content .content figure {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.main_content .content figure .box {
+    margin: 0 0 40px 0;
+    overflow: hidden;
+}
+
+.main_content .content figure strong {
+    display: block;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+.main_content .content p {
+    font-weight: 300;
+}
+
+.main_content .content figure img {
+    transition: 1s;
+}
+
+.main_content .content figure:hover img {
+    transform: scale(1.1);
+}
+
+
+.main_content figure:hover .cover {
+    content: "I";
+    position: absolute;
+    inset: 0 auto auto 0;
+    font-size: 160px;
+    font-weight: 100;
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footer {
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    padding: 30px 0 50px 0;
+    text-align: center;
+}
+
+.footer address {
+    margin: 0 0 10px 0;
+}
+
+.footer .footer_customer {
+    margin: 0 0 10px 0;
+    font-size: 0;
+}
+
+.footer .footer_customer li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.footer .footer_customer li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: #ddd;
+    margin: 0 10px;
+}
+
+.to_top {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+}
+
+.to_top i {
+    position: relative;
+    background: #369;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: 0.5px solid #000;
+    border-radius: 25%;
+}
+
+
+.to_top.on {
+    display: none;
+}
